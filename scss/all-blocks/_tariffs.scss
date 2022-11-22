@@ -1,0 +1,100 @@
+.tariffs {
+    padding: 80px 100px;
+    background-color: #F4F5F9;
+
+    &__container {
+        @extend %container;
+        @include flex(column, )
+    }
+
+    &__heading {
+        margin-bottom: 40px;
+
+        
+    }
+
+    &__oneTariff {
+        padding: 40px 122px 48px 122px;
+        display: grid;
+        grid-template-columns: 28% 30% 30%;
+        align-items: flex-start;
+        text-align: start;
+        column-gap: 80px;
+        background-color: #FAFAFA;
+        border-radius: 9px;
+    }
+
+    &__lightMode {
+        &__head {
+            margin-bottom: 50px;
+            display: flex;
+
+            h4 {
+                @include font-decoration(900, 24px, 29px)
+            }
+
+            h3 {
+                color: #EB5757;
+                margin: 8px 0 16px 0;
+            }
+
+            strong {
+                @include font-decoration(900, 16px, 20px);
+            }
+
+            &--blue {
+                color: #2D9CDB;
+            }
+
+            &--gray {
+                color: #D3D0C7;
+                margin-left: 32px;
+            }
+        }
+
+        &__body {
+            ul {
+                li {
+                    @include font-decoration(500, 14px, 20px);
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+
+    &__grayMode{
+        opacity: 0.3;
+    }
+
+    &__btn {
+        @include btn-main(transparent);
+        margin-top: 66px;
+        width: 180px;
+
+        a {
+            color: $main-color;
+            @include font-decoration(700, 12px, 15px)
+        }
+    }
+
+    &__btn:hover {
+        @include btn-main;
+
+        a {
+            color: $light-color;
+        }
+
+    }
+
+    &__everyTariffs{
+        padding: 16.5px 32.5px;
+        border: 1px solid $main-color;
+        border-radius: 4px;
+        margin-top: 30px;
+        a {
+            color: $main-color;
+            @include font-decoration(700, 12px, 15px)
+        }
+    }
+
+}

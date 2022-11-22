@@ -1,0 +1,79 @@
+.cooperation {
+    padding: 83px 0 84px;
+
+    &__container {
+        @extend %container;
+        @include flex(column, );
+    }
+
+    &__heading {
+        margin-bottom: 42px;
+
+        h3 {
+            margin-bottom: 24px;
+        }
+
+        h5 {
+            width: 95%;
+        }
+    }
+
+    &__frame {
+        @include flex;
+
+        &__box{
+            &__h5{
+                @include font-decoration(700, 18px, 22px)
+            }
+            p{
+                @include font-decoration(400, 14px, 20px);
+            }
+            
+            &--1{
+                display: flex;
+                flex-direction: column;
+                align-content: flex-end;
+                align-items: end;
+                margin-bottom: 40px;
+                margin-right: -103px;
+                width: 290px;
+                // text-align: reverse;
+            }
+
+            &--2{
+                display: flex;
+                flex-direction: column;   
+                align-items: start;
+                margin-bottom: 40px;
+                margin-left: -103px;
+                width: 290px;
+            }
+        }
+    }
+
+
+    &__btns {
+        @include flex;
+        @include flex-gap(20px);
+        margin-top: -48px;
+
+        &--normal {
+            @include btn-main;
+        }
+
+        &--normal:hover {
+            @include btn-main(transparent, 1px solid $main-color);
+        }
+
+        &--secondary {
+            @include btn-main(transparent, 1px solid $main-color);
+
+        }
+
+        &--secondary:hover {
+            @include btn-main;
+        }
+
+    }
+
+}

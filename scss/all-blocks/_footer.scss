@@ -1,0 +1,65 @@
+.footer{
+    padding: 56px 303px 56px 240px;
+    background-color: #34495E;
+    color: $light-color;
+    &__container{
+        display: flex;
+        column-gap: 190px;
+    }
+
+    &__context{
+
+        strong{
+            @include font-decoration(800, 12px, 15px);
+        }
+        p{
+            margin: 9px 0 32px 0;
+            @include font-decoration(500, 12px, 15px);
+        }
+    }
+
+    &__additional{
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    &__subscribe{
+        form{
+            margin-top: 24px;
+            display: flex;
+            column-gap: 20px;
+        }
+
+        &__email{
+            @include font-decoration(400, 12px, 15px);
+            padding: 14px 93px 14px 14px;
+            background-color: #253544;
+            color: #BDBDBD;
+        }
+    }
+
+    &__website{
+        margin-bottom: 350px;
+        ul{
+            display: flex;
+            column-gap: 18px;
+            margin-top: 24px;
+            li{
+                list-style: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px){
+    .footer{
+        padding: 50px 150px ;
+    }
+}
+
+@media (max-width: 1250px){
+    .footer{
+        padding: 50px 120px ;
+    }
+}
